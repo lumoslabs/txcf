@@ -1,10 +1,6 @@
-* 1\. Entry is published in contentful.
-* 2\. Contentful sends webhook
-* 3\. Service recieves contentful hook
-* 4\. Push cf_{entry_name}_{entry_id}_en.json resource built from entry fields
-* 5\. Transifex sends webhook
-* 6\. Service recieves transifex hook
-  * 6\.1\. fetch contentful entry
-  * 6\.2\. replace fields with fields from transifex hook
-  * 6\.3\. push entry to contentful with relevant locale
-  * 6\.4\. publish entry or send a slack notification for someone to do it manually
+1. After an entry in Contentful is published, it can send a webhook with the entry data to txcf service. Example of such hook is posted below.
+2. txcf service should parse en keys from all fields and build a json document cf_{entry_id}_en.json
+3. cf_{entry_id}_en.json should be pushed as a resource to lumos-static-site-generator project in Transifex.
+4. After cf_{entry_id}_en.json is translated, Transifex can send a webhook with resource data to txcf service. Example of such hook is posted below.
+5. txcf service should update the entry with the corresponding id and locale in Contentful via API call.
+6. txcf service should publish the entry (this will bring us to step 1 which is ok, since step 4 is triggered only after there are new translations).
