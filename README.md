@@ -7,4 +7,4 @@
   * 6\.1\. fetch contentful entry
   * 6\.2\. replace fields with fields from transifex hook
   * 6\.3\. push entry to contentful with relevant locale
-  * 6\.4\. publish entry
+  * 6\.4\. publish entry or send a slack notification for someone to do it manually
