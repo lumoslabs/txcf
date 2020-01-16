@@ -1,0 +1,82 @@
+Request headers
+{
+  "X-Contentful-Topic": "ContentManagement.Entry.auto_save",
+  "X-Contentful-Webhook-Name": "gatsby preview server",
+  "Content-Type": "application/vnd.contentful.management.v1+json"
+}
+Request body
+{
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "8mn0755ou4sj"
+      }
+    },
+    "id": "4z6FoIRMsE7QrUMfGGqysD",
+    "type": "Entry",
+    "createdAt": "2019-06-20T23:25:37.702Z",
+    "updatedAt": "2020-01-15T19:08:12.451Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 56,
+    "publishedAt": "2019-06-20T23:27:29.004Z",
+    "firstPublishedAt": "2019-06-20T23:27:29.004Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "7moYyAWEpKKZ66A7YKWcNB"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "7GSrAp5HLQqvuMALNKKt9s"
+      }
+    },
+    "publishedCounter": 1,
+    "version": 61,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "7moYyAWEpKKZ66A7YKWcNB"
+      }
+    },
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "card"
+      }
+    }
+  },
+  "fields": {
+    "name": {
+      "en": "Brain training for everyone"
+    },
+    "headline": {
+      "en": "Brain training for everyone"
+    },
+    "graphic": {
+      "en": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Asset",
+          "id": "3icjHRWPS0WOqyGIi8kSqi"
+        }
+      }
+    },
+    "copy": {
+      "en": "No matter your age or skill level, Lumosity adapts to your unique strengths and weaknesses."
+    }
+  }
+}
