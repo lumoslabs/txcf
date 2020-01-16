@@ -1,0 +1,58 @@
+{
+  "sys": {
+    "type": "Entry",
+    "id": "QwHmCigc2q6FZiGwURgjm",
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "8mn0755ou4sj"
+      }
+    },
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "txcf"
+      }
+    },
+    "revision": 1,
+    "createdAt": "2020-01-16T22:27:48.526Z",
+    "updatedAt": "2020-01-16T22:27:48.526Z"
+  },
+  "fields": {
+    "localizedShortText": {
+      "en": "Localized short text  test"
+    },
+    "localizedRichTextField": {
+      "en": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Localized rich text  test",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    },
+    "notLocalizedLongText": {
+      "en": "Not localized short text  test"
+    }
+  }
+}

@@ -1,29 +1,34 @@
 require 'contentful'
+require 'contentful/management'
 require 'pry-byebug'
 require 'transifex'
 require 'dotenv'
 
 Dotenv.load
 
-client = Contentful::Client.new(
-  space: ENV['CONTENTFUL_SPACE'],  # This is the space ID. A space is like a project folder in Contentful terms
-  access_token: ENV['CONTENTFUL_TOKEN']
-)
+management_client = Contentful::Management::Client.new(ENV['CONTENTFUL_MANAGEMENET_TOKEN'])
+
+environment = management_client.environments(ENV['CONTENTFUL_SPACE']).find('master')
+entry = environment.entries.find('QwHmCigc2q6FZiGwURgjm')
+puts entry.fields_for_query
+content_type = environment.content_types.find(entry.raw_object['sys']['contentType']['sys']['id'])
+puts content_type.fields.first.properties
+# entry.localized_short_text = {'fr' => 'fr text'}
+
+
+delivery_client = Contentful::Client.new(space: ENV['CONTENTFUL_SPACE'], access_token: ENV['CONTENTFUL_TOKEN'])
+# entry = delivery_client.entry('QwHmCigc2q6FZiGwURgjm')
+# entry = client.entry('13lM9WJGDaBBL79WoqWrGR', locale: 'en')
 
 Transifex.configure do |c|
   c.client_login = ENV['TF_LOGIN']
   c.client_secret = ENV['TF_SECRET']
 end
 
+transifex_project = Transifex::Project.new('lumos-static-site-generator')
 binding.pry
-# This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
-entry = client.entry('EIo6nUr4D351f0Tu3tE4B', locale: 'en')
-# entry = client.entry('4z6FoIRMsE7QrUMfGGqysD', locale: 'en')
-# entry = client.entry('13lM9WJGDaBBL79WoqWrGR', locale: 'en')
-puts 11
 
-# transifex_project = Transifex::Project.new('lumos-static-site-generator')
-# transifex_project.languages.fetch
+transifex_project.languages.fetch
 # transifex_project.resources.fetch
 # project_resource = transifex_project.resource("enjson_1-heads_master")
 # project_resource.fetch_with_details
