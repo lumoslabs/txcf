@@ -15,8 +15,9 @@ content_type = environment.content_types.find(entry.raw_object['sys']['contentTy
 puts content_type.fields.first.properties
 
 # entry.locale = 'en'
-# entry.fields[:localizedShortText] = 'en text'
+# entry.fields[:localizedShortText] = 'en text tesging'
 # entry.save
+# entry.publish
 # puts entry.fields[:localizedShortText]
 # entry.reload
 # entry.locale = 'fr'
