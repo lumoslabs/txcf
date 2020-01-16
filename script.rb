@@ -13,8 +13,16 @@ entry = environment.entries.find('QwHmCigc2q6FZiGwURgjm')
 puts entry.fields_for_query
 content_type = environment.content_types.find(entry.raw_object['sys']['contentType']['sys']['id'])
 puts content_type.fields.first.properties
-# entry.localized_short_text = {'fr' => 'fr text'}
 
+# entry.locale = 'en'
+# entry.fields[:localizedShortText] = 'en text'
+# entry.save
+# puts entry.fields[:localizedShortText]
+# entry.reload
+# entry.locale = 'fr'
+# entry.fields[:localizedShortText] = 'en text'
+# entry.save
+# puts entry.fields[:localizedShortText]
 
 delivery_client = Contentful::Client.new(space: ENV['CONTENTFUL_SPACE'], access_token: ENV['CONTENTFUL_TOKEN'])
 # entry = delivery_client.entry('QwHmCigc2q6FZiGwURgjm')
