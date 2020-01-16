@@ -16,9 +16,9 @@ end
 
 binding.pry
 # This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
-# entry = client.entry('4z6FoIRMsE7QrUMfGGqysD', locale: 'en')
+entry = client.entry('EIo6nUr4D351f0Tu3tE4B', locale: 'en')
 puts 11
 
-transifex_project = Transifex::Project.new('lumos-static-site-generator')
-transifex_project.languages.fetch
-transifex_project.resources.fetch
+# transifex_project = Transifex::Project.new('lumos-static-site-generator')
+# transifex_project.languages.fetch
+# transifex_project.resources.fetch
