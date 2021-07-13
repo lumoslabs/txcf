@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     byebug (11.0.1)
     coderay (1.1.2)
@@ -38,7 +38,7 @@ GEM
     pry-byebug (3.7.0)
       byebug (~> 11.0)
       pry (~> 0.10)
-    public_suffix (4.0.3)
+    public_suffix (4.0.6)
     rake (13.0.1)
     transifex-interface-ruby (0.0.2)
     unf (0.1.4)
